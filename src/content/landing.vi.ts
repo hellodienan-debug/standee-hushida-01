@@ -132,7 +132,7 @@ export const deploymentGallery: GalleryContent = {
     "Standee Hushida đã được lắp đặt tại nhiều không gian giao dịch và doanh nghiệp.",
   images: [
     {
-      src: "/images/gallery/standee-lobby.webp",
+      src: "/images/gallery/standee-lobby.jpg",
       alt: "Standee Hushida tại sảnh lễ tân doanh nghiệp",
       caption: "Sảnh lễ tân doanh nghiệp",
       span: "row-span-2",
@@ -143,25 +143,25 @@ export const deploymentGallery: GalleryContent = {
       caption: "Showroom bán hàng",
     },
     {
-      src: "/images/gallery/standee-retail.webp",
+      src: "/images/gallery/standee-retail.png",
       alt: "Standee Hushida tại điểm bán lẻ",
       caption: "Khu vực điểm bán",
     },
     {
-      src: "/images/gallery/standee-office.webp",
+      src: "/images/gallery/standee-office.jpg",
       alt: "Standee Hushida tại văn phòng",
       caption: "Văn phòng doanh nghiệp",
       span: "row-span-2",
     },
     {
-      src: "/images/gallery/standee-hospitality.webp",
-      alt: "Standee Hushida tại khu vực hospitality",
-      caption: "Khu vực hospitality",
-    },
-    {
-      src: "/images/gallery/standee-meeting.webp",
+      src: "/images/gallery/standee-meeting.png",
       alt: "Standee Hushida tại phòng họp và hội nghị",
       caption: "Phòng họp & hội nghị",
+    },
+    {
+      src: "/images/gallery/standee-hospitality.png",
+      alt: "Standee Hushida tại khu vực hospitality",
+      caption: "Khu vực hospitality",
     },
   ],
 };
@@ -181,7 +181,7 @@ export const caseStudy = {
    * alt cho phù hợp (mô tả rõ standee + khu vực giao dịch).
    */
   image: {
-    src: "/images/gallery/standee-lobby.webp",
+    src: "/images/gallery/standee-lobby.jpg",
     alt: "Hình ảnh triển khai Digital Standee Hushida tại khu vực giao dịch",
     caption: "Hình ảnh triển khai thực tế tại khu vực giao dịch.",
   },
