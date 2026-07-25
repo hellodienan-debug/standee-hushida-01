@@ -1,7 +1,7 @@
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/motion/Reveal";
-import { Placeholder } from "@/components/ui/Placeholder";
+import Image from "next/image";
 import { hero } from "@/content/landing.vi";
 import { Shield, Truck, Headphones } from "lucide-react";
 
@@ -71,9 +71,14 @@ export function HeroSection() {
 
           <Reveal className="relative flex justify-center lg:justify-end">
             <div className="w-full max-w-[min(60dvh,480px)] px-2 sm:px-0">
-              <Placeholder
-                label="Hình ảnh minh họa Hushida 50 inch"
-                className="aspect-[4/5]"
+              <Image
+                src="/images/hero/hero-product.png"
+                alt="Hushida Digital Standee 50 inch trình chiếu nội dung 4K"
+                width={800}
+                height={1000}
+                priority
+                sizes="(min-width: 1024px) 480px, 60vw"
+                className="block aspect-[4/5] w-full rounded-[1.5rem] object-cover"
               />
             </div>
           </Reveal>

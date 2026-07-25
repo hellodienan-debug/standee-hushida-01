@@ -1,5 +1,6 @@
 import { Container } from "@/components/ui/Container";
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import Image from "next/image";
 
 const STORY = [
   {
@@ -33,21 +34,14 @@ export function VietinBankCaseStudy() {
         />
 
         <div className="vbtcs-main mt-10 grid gap-6 md:mt-12 md:grid-cols-[55fr_45fr] md:gap-8 lg:mt-14 lg:gap-10">
-          {/* Local image placeholder. Expected replacement path: {IMAGE_EXPECTED_PATH} */}
-          <div
-            role="img"
-            aria-label={IMAGE_ALT}
-            className="vbtcs-image relative flex aspect-[4/3] w-full items-center justify-center overflow-hidden rounded-[1.25rem] border border-border bg-brand-light"
-          >
-            <div className="text-center">
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-brand">
-                Ảnh triển khai thực tế
-              </p>
-              <p className="mt-2 text-sm font-medium text-brand/80">
-                {IMAGE_EXPECTED_PATH}
-              </p>
-            </div>
-          </div>
+          <Image
+            src={IMAGE_EXPECTED_PATH}
+            alt={IMAGE_ALT}
+            width={1276}
+            height={956}
+            sizes="(min-width: 768px) 55vw, 100vw"
+            className="block aspect-[4/3] w-full rounded-[1.25rem] object-cover"
+          />
           <p className="vbtcs-caption mt-3 text-sm text-muted md:hidden">
             Hình ảnh triển khai thực tế tại khu vực giao dịch.
           </p>
