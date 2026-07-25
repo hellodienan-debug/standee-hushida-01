@@ -5,7 +5,6 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { navigation } from "@/content/landing.vi";
 import { SITE } from "@/lib/constants";
-import { cn } from "@/lib/utils";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -40,6 +39,7 @@ export function Header() {
   return (
     <header
       className="sticky top-0 z-40 border-b border-white/10 bg-navy transition-all duration-300"
+      style={{ paddingTop: "env(safe-area-inset-top)" }}
     >
       <div className="container-shell flex h-[44px] items-center justify-between gap-4">
         <Link
@@ -68,7 +68,7 @@ export function Header() {
             </a>
           ))}
           <a
-            href="#lead-form"
+            href="#dang-ky-demo"
             className="rounded-full bg-accent px-5 py-2 text-[13px] font-bold text-white transition-colors hover:bg-accent-dark"
           >
             Đăng ký demo
@@ -94,7 +94,7 @@ export function Header() {
         className="border-t border-white/10 bg-navy md:hidden"
       >
         <nav
-          className="container-shell flex flex-col gap-5 py-6 text-sm font-bold text-white"
+          className="container-shell flex flex-col gap-1 py-6 text-sm font-bold text-white"
           aria-label="Điều hướng di động"
         >
           {navigation.map((item) => (
@@ -102,15 +102,15 @@ export function Header() {
               key={item.href}
               href={item.href}
               onClick={close}
-              className="py-1 transition-colors hover:text-[#F59E0B]"
+              className="rounded-lg px-3 py-3 transition-colors hover:bg-white/5 hover:text-[#F59E0B]"
             >
               {item.label}
             </a>
           ))}
           <a
-            href="#lead-form"
+            href="#dang-ky-demo"
             onClick={close}
-            className="mt-2 rounded-full bg-accent px-5 py-3 text-center text-sm font-bold text-white transition-colors hover:bg-accent-dark"
+            className="mt-3 rounded-full bg-accent px-5 py-3 text-center text-sm font-bold text-white transition-colors hover:bg-accent-dark"
           >
             Đăng ký demo
           </a>

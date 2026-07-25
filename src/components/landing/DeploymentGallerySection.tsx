@@ -51,13 +51,13 @@ export function DeploymentGallerySection() {
           />
         </Reveal>
 
-        <div className="mt-12 md:grid md:grid-cols-3 md:auto-rows-[13rem] md:gap-4 lg:mt-14 lg:auto-rows-[15rem]">
+        <div className="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 md:mt-12 md:grid-cols-3 md:auto-rows-[13rem] lg:mt-14 lg:auto-rows-[15rem]">
           {deploymentGallery.images.map((image, index) => (
             <Reveal
               key={image.src}
               delay={index * 0.06}
               className={cn(
-                "group relative shrink-0 overflow-hidden rounded-2xl shadow-[0_12px_35px_rgba(7,27,43,0.12)] md:min-h-0",
+                "group relative aspect-[4/3] overflow-hidden rounded-2xl shadow-[0_12px_35px_rgba(7,27,43,0.12)] sm:aspect-auto sm:min-h-[12rem] md:min-h-0",
                 image.span,
                 "md:col-span-1",
               )}
@@ -72,19 +72,17 @@ export function DeploymentGallerySection() {
                   src={image.src}
                   alt={image.alt}
                   fill
-                  sizes="(max-width: 767px) 86vw, (max-width: 1279px) 33vw, 26vw"
+                  sizes="(max-width: 639px) 100vw, (max-width: 767px) 50vw, (max-width: 1279px) 33vw, 26vw"
                   className="object-cover transition duration-700 ease-out group-hover:scale-105"
                   loading={index === 0 ? "eager" : "lazy"}
                 />
-                <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/65 to-transparent px-5 pb-4 pt-12 text-sm font-semibold text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/65 to-transparent px-5 pb-4 pt-12 text-sm font-semibold text-white opacity-100 transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100">
                   {image.caption}
                 </span>
               </button>
             </Reveal>
           ))}
         </div>
-
-        <p className="mt-4 text-xs text-muted md:hidden">Vuốt sang để xem thêm hình ảnh</p>
       </Container>
 
       {activeImage && activeIndex !== null && (

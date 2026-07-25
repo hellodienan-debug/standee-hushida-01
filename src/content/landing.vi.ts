@@ -1,6 +1,5 @@
 import type {
   AnnouncementContent,
-  CaseStudy,
   ComparisonRow,
   FaqItem,
   GalleryContent,
@@ -8,12 +7,9 @@ import type {
   LeadFormContent,
   Metric,
   NavItem,
-  ProblemItem,
   ProcessStep,
-  ServiceItem,
   SolutionStep,
   Spec,
-  UseCase,
 } from "@/types/content";
 
 // =========================================================================
@@ -38,7 +34,7 @@ export const siteConfig = {
 // =========================================================================
 export const announcement: AnnouncementContent = {
   label: "Dùng thử miễn phí 7 ngày tại Thành phố Hồ Chí Minh và Bình Dương.",
-  href: "#trial",
+  href: "#dang-ky-demo",
   cta: "Xem điều kiện chương trình",
 };
 
@@ -46,12 +42,11 @@ export const announcement: AnnouncementContent = {
 // HEADER
 // =========================================================================
 export const navigation: NavItem[] = [
-  { label: "Giải pháp", href: "#solutions" },
-  { label: "CMS Cloud", href: "#cms" },
+  { label: "Giải pháp", href: "#cms" },
   { label: "Ứng dụng", href: "#industries" },
   { label: "Thông số", href: "#product" },
   { label: "Dự án thực tế", href: "#proof" },
-  { label: "Câu hỏi thường gặp", href: "#faq" },
+  { label: "FAQ", href: "#faq" },
 ];
 
 // =========================================================================
@@ -62,8 +57,8 @@ export const hero = {
   title: "Biến mỗi không gian thành một điểm chạm thương hiệu số.",
   description:
     "Trình chiếu nội dung 4K sống động, cập nhật từ xa qua CMS Cloud và đồng bộ truyền thông trên nhiều thiết bị với Hushida Digital Standee 50 inch.",
-  primaryCta: { label: "Đăng ký dùng thử 7 ngày", href: "#trial" },
-  secondaryCta: { label: "Nhận tư vấn và báo giá", href: "#lead-form" },
+  primaryCta: { label: "Đăng ký dùng thử 7 ngày", href: "#dang-ky-demo" },
+  secondaryCta: { label: "Nhận tư vấn và báo giá", href: "#dang-ky-demo" },
   trustPoints: [
     "Demo miễn phí",
     "Giao hàng 1–2 ngày",
@@ -93,94 +88,40 @@ export const industries: Industry[] = [
   {
     name: "Ngân hàng",
     description:
-      "Hiển thị ưu đãi, thông báo và nội dung thương hiệu tại sảnh giao dịch.",
+      "Truyền thông chương trình, sản phẩm và hướng dẫn khách hàng tại sảnh giao dịch.",
     icon: "bank",
   },
   {
     name: "Showroom",
     description:
-      "Trình chiếu sản phẩm, chương trình bán hàng và video trải nghiệm.",
+      "Trình chiếu sản phẩm, ưu đãi và nội dung thương hiệu trong không gian trưng bày.",
     icon: "car",
   },
   {
     name: "Bán lẻ",
     description:
-      "Đồng bộ thông điệp khuyến mãi tại nhiều điểm bán.",
+      "Cập nhật chương trình khuyến mãi và nội dung tại nhiều điểm bán.",
     icon: "shopping-bag",
-  },
-  {
-    name: "Y tế",
-    description:
-      "Hướng dẫn, thông báo và nội dung truyền thông tại khu vực tiếp đón.",
-    icon: "heart-pulse",
-  },
-  {
-    name: "Khách sạn",
-    description:
-      "Giới thiệu dịch vụ, sự kiện và hướng dẫn khách tại sảnh.",
-    icon: "hotel",
-  },
-  {
-    name: "Giáo dục",
-    description:
-      "Truyền tải thông báo, lịch học và nội dung sự kiện.",
-    icon: "graduation-cap",
   },
   {
     name: "Văn phòng",
     description:
-      "Truyền thông nội bộ và nâng cấp hình ảnh khu vực lễ tân.",
+      "Truyền thông nội bộ, thông báo và cập nhật hoạt động doanh nghiệp.",
     icon: "building",
+  },
+  {
+    name: "Khách sạn",
+    description:
+      "Hiển thị thông tin dịch vụ, sự kiện và hướng dẫn dành cho khách hàng.",
+    icon: "hotel",
   },
   {
     name: "Bất động sản",
     description:
-      "Trình chiếu dự án, mặt bằng và nội dung tư vấn.",
+      "Trình chiếu dự án, mặt bằng, tiện ích và thông tin tư vấn bán hàng.",
     icon: "home",
   },
 ];
-
-// =========================================================================
-// VẤN ĐỀ CỦA TRUYỀN THỐNG
-// =========================================================================
-export const problem = {
-  headline:
-    "Poster thay đổi liên tục. Quy trình cập nhật vẫn còn thủ công.",
-  description:
-    "Nhiều doanh nghiệp vẫn phụ thuộc vào in ấn, treo poster và thay bảng nội bộ theo từng chương trình. Hệ quả là chi phí lặp lại, thông điệp thiếu đồng bộ và mất thời gian vận hành.",
-  items: [
-    {
-      title: "Mỗi chiến dịch phải in lại",
-      description:
-        "Chi phí in ấn, thiết kế và vật tư phát sinh theo từng đợt.",
-    },
-    {
-      title: "Nội dung giữa các chi nhánh thiếu đồng bộ",
-      description:
-        "Mỗi điểm áp dụng thời điểm khác nhau, hình ảnh thương hiệu không nhất quán.",
-    },
-    {
-      title: "Thay poster tốn thời gian",
-      description:
-        "Nhân sự phải di chuyển giữa các điểm và thao tác thủ công.",
-    },
-    {
-      title: "Thông tin dễ lỗi thời",
-      description:
-        "Bảng nội dung cập nhật chậm, không theo kịp chương trình.",
-    },
-    {
-      title: "Hình ảnh tĩnh khó thu hút",
-      description:
-        "Không thể hiện được thông điệp động, không tạo điểm nhấn tại không gian.",
-    },
-    {
-      title: "Chi phí lặp lại theo từng chương trình",
-      description:
-        "Mỗi đợt truyền thông phát sinh đầu mục chi phí mới.",
-    },
-  ] satisfies ProblemItem[],
-};
 
 // =========================================================================
 // HÌNH ẢNH TRIỂN KHAI THỰC TẾ
@@ -226,177 +167,121 @@ export const deploymentGallery: GalleryContent = {
 };
 
 // =========================================================================
+// CASE STUDY — DỰ ÁN TRIỂN KHAI THỰC TẾ
+// =========================================================================
+export const caseStudy = {
+  eyebrow: "Dự án thực tế",
+  title: "Giải pháp truyền thông số triển khai tại VietinBank",
+  description:
+    "SHT triển khai màn hình Digital Standee Hushida nhằm hỗ trợ trình chiếu nội dung truyền thông, chương trình và thông tin dành cho khách hàng tại khu vực giao dịch.",
+  /**
+   * Ảnh minh họa — TODO:
+   * Khi có ảnh triển khai thực tế tại VietinBank, thay src bằng
+   * đường dẫn /images/case-study/vietinbank-standee.webp và cập nhật
+   * alt cho phù hợp (mô tả rõ standee + khu vực giao dịch).
+   */
+  image: {
+    src: "/images/gallery/standee-lobby.webp",
+    alt: "Hình ảnh triển khai Digital Standee Hushida tại khu vực giao dịch",
+    caption: "Hình ảnh triển khai thực tế tại khu vực giao dịch.",
+  },
+  story: [
+    {
+      title: "Bài toán",
+      body: "Nội dung truyền thông tại điểm giao dịch cần được hiển thị rõ ràng, chuyên nghiệp và thuận tiện khi cập nhật theo từng chương trình.",
+    },
+    {
+      title: "Giải pháp",
+      body: "SHT đề xuất Digital Standee Hushida 50 inch kết hợp CMS Cloud, giúp trình chiếu hình ảnh và video, đồng thời hỗ trợ cập nhật nội dung từ xa.",
+    },
+    {
+      title: "Triển khai",
+      body: "Thiết bị được giao, lắp đặt, cấu hình và hỗ trợ thiết lập nội dung ban đầu để sẵn sàng đưa vào sử dụng.",
+    },
+  ],
+  value: {
+    title: "Giá trị của giải pháp",
+    cards: [
+      {
+        title: "Hiển thị chuyên nghiệp",
+        body: "Nội dung được trình chiếu trên màn hình 4K phù hợp với không gian giao dịch hiện đại.",
+      },
+      {
+        title: "Cập nhật linh hoạt",
+        body: "Hình ảnh và video có thể được thay đổi theo từng chương trình truyền thông.",
+      },
+      {
+        title: "Quản lý từ xa",
+        body: "CMS Cloud hỗ trợ cập nhật nội dung mà không cần thao tác trực tiếp trên từng thiết bị.",
+      },
+      {
+        title: "Đồng hành triển khai",
+        body: "SHT hỗ trợ tư vấn, giao hàng, lắp đặt và hướng dẫn vận hành.",
+      },
+    ],
+  },
+  badges: ["Digital Standee 50\"", "4K UHD", "CMS Cloud", "Lắp đặt & cấu hình"],
+  cta: {
+    label: "Đăng ký demo giải pháp tương tự",
+    href: "#dang-ky-demo",
+  },
+  microcopy:
+    "SHT hỗ trợ demo tại TP.HCM và Bình Dương theo lịch thiết bị.",
+};
+
+// =========================================================================
 // GIẢI PHÁP
 // =========================================================================
 export const solution = {
   headline:
-    "Một nền tảng. Nhiều điểm hiển thị. Một trải nghiệm thương hiệu thống nhất.",
+    "Quản lý toàn bộ nội dung từ một nơi",
   description:
-    "Hushida Digital Signage kết hợp phần cứng chuyên dụng với CMS Cloud để doanh nghiệp quản lý mọi điểm chạm truyền thông từ một nơi.",
+    "Tải nội dung, lựa chọn thiết bị, lên lịch và đồng bộ hiển thị từ xa trên một nền tảng CMS Cloud.",
   steps: [
     {
       step: 1,
-      title: "Tải nội dung lên CMS",
-      description: "Hình ảnh, video hoặc bố cục theo chiến dịch.",
+      title: "Tải nội dung",
+      description: "Upload hình ảnh, video hoặc bố cục theo chiến dịch.",
     },
     {
       step: 2,
       title: "Chọn thiết bị",
-      description: "Một hoặc nhiều màn hình theo chi nhánh.",
+      description: "Một hoặc nhiều màn hình tại các chi nhánh.",
     },
     {
       step: 3,
-      title: "Sắp xếp lịch phát",
-      description: "Theo khung giờ, theo ngày hoặc theo chương trình.",
+      title: "Lên lịch",
+      description: "Sắp xếp theo khung giờ, ngày hoặc chương trình.",
     },
     {
       step: 4,
-      title: "Cập nhật từ xa",
-      description:
-        "Thay đổi nội dung mà không cần đến điểm lắp đặt.",
-    },
-    {
-      step: 5,
-      title: "Hiển thị tại điểm kinh doanh",
-      description:
-        "Standee phát nội dung đồng bộ theo đúng kế hoạch.",
+      title: "Hiển thị",
+      description: "Nội dung đồng bộ trên mọi thiết bị từ xa.",
     },
   ] satisfies SolutionStep[],
   benefits: [
-    "Không cần thay poster thủ công",
-    "Dễ đồng bộ nhiều địa điểm",
-    "Phù hợp hình ảnh và video",
-    "Chủ động theo chiến dịch",
-    "Có thể phát ngoại tuyến",
-    "Hỗ trợ chia bố cục màn hình",
-  ],
-};
-
-// =========================================================================
-// CMS CLOUD — Section trọng tâm, nền tối
-// =========================================================================
-export const cmsCloud = {
-  headline: "Quản lý nội dung từ một nơi.",
-  description:
-    "Tải lên hình ảnh hoặc video, chọn thiết bị, sắp xếp bố cục và cập nhật nội dung từ xa qua CMS Cloud.",
-  features: [
     {
       title: "Quản lý nhiều thiết bị",
       description:
-        "Một tài khoản có thể được sử dụng để quản lý nhiều thiết bị.",
+        "Theo dõi và điều khiển nhiều màn hình từ cùng một tài khoản CMS.",
     },
     {
-      title: "Cập nhật từ xa",
+      title: "Cập nhật nội dung từ xa",
       description:
-        "Thay đổi nội dung theo thời gian thực từ bất kỳ đâu có kết nối Internet.",
-    },
-    {
-      title: "Hình ảnh và video",
-      description: "Hỗ trợ nhiều định dạng nội dung phổ biến.",
+        "Thay đổi hình ảnh và video mà không cần thao tác trực tiếp trên từng thiết bị.",
     },
     {
       title: "Chia bố cục màn hình",
       description:
-        "Hiển thị đồng thời nhiều vùng nội dung trong cùng một màn hình.",
+        "Kết hợp video, hình ảnh, văn bản và các vùng nội dung trên cùng màn hình.",
     },
     {
       title: "Phát nội dung ngoại tuyến",
       description:
-        "Nội dung đã tải vẫn có thể tiếp tục phát khi kết nối mạng bị gián đoạn.",
-    },
-    {
-      title: "Hỗ trợ nhiều ngôn ngữ",
-      description: "Phù hợp doanh nghiệp vận hành đa ngôn ngữ.",
-    },
-    {
-      title: "CMS miễn phí theo chính sách hiện tại",
-      description:
-        "Không phát sinh chi phí CMS theo chính sách hiện hành.",
+        "Nội dung đã tải vẫn tiếp tục phát khi kết nối Internet bị gián đoạn.",
     },
   ],
 };
-
-// =========================================================================
-// LỢI ÍCH KINH DOANH
-// =========================================================================
-export const businessBenefits = {
-  headline:
-    "Giá trị không nằm ở chiếc màn hình. Giá trị nằm ở cách doanh nghiệp vận hành nội dung.",
-  description:
-    "Mỗi doanh nghiệp đều có nội dung cần truyền tải. Vấn đề là nội dung đó đến đúng nơi, đúng lúc và đúng cách.",
-  groups: [
-    {
-      title: "Thương hiệu",
-      items: [
-        "Hình ảnh chuyên nghiệp và nhất quán hơn tại mọi điểm chạm.",
-        "Không gian hiện đại, nâng cấp trải nghiệm khách hàng.",
-        "Truyền tải thông điệp chuẩn theo nhận diện thương hiệu.",
-      ],
-    },
-    {
-      title: "Vận hành",
-      items: [
-        "Giảm phụ thuộc vào in ấn và thao tác thủ công.",
-        "Rút ngắn thời gian cập nhật nội dung.",
-        "Quản lý tập trung nhiều chi nhánh.",
-      ],
-    },
-    {
-      title: "Trải nghiệm",
-      items: [
-        "Tạo điểm nhấn ngay tại khu vực lễ tân và điểm bán.",
-        "Tái sử dụng thiết bị cho nhiều mục đích.",
-        "Chủ động theo chiến dịch và sự kiện.",
-      ],
-    },
-  ],
-};
-
-// =========================================================================
-// KỊCH BẢN SỬ DỤNG
-// =========================================================================
-export const useCases: UseCase[] = [
-  {
-    title: "Khu vực lễ tân",
-    description:
-      "Tạo ấn tượng đầu tiên với thông điệp thương hiệu nhất quán.",
-  },
-  {
-    title: "Sảnh giao dịch",
-    description:
-      "Hiển thị thông báo, sản phẩm và chương trình đang triển khai.",
-  },
-  {
-    title: "Showroom",
-    description:
-      "Trình chiếu video sản phẩm và câu chuyện thương hiệu.",
-  },
-  {
-    title: "Điểm bán",
-    description:
-      "Đồng bộ chương trình khuyến mãi theo từng thời điểm.",
-  },
-  {
-    title: "Phòng chờ",
-    description:
-      "Biến thời gian chờ thành trải nghiệm thương hiệu.",
-  },
-  {
-    title: "Sự kiện",
-    description:
-      "Phông nền số linh hoạt cho chương trình và hội nghị.",
-  },
-  {
-    title: "Hội nghị",
-    description:
-      "Hiển thị lịch trình, thông tin diễn giả và nội dung sự kiện.",
-  },
-  {
-    title: "Truyền thông nội bộ",
-    description:
-      "Cập nhật thông báo nội bộ cho đội ngũ tại văn phòng và nhà máy.",
-  },
-];
 
 // =========================================================================
 // THÔNG SỐ NỔI BẬT
@@ -540,108 +425,23 @@ export const comparison = {
 };
 
 // =========================================================================
-// DỰ ÁN THỰC TẾ — Placeholder, không bịa số liệu
-// =========================================================================
-export const caseStudies: CaseStudy[] = [
-  {
-    industry: "Ngân hàng",
-    context:
-      "Sảnh giao dịch tại khu vực thành thị với lưu lượng khách lớn mỗi ngày.",
-    need:
-      "Truyền tải thông điệp thương hiệu và thông báo chương trình ưu đãi.",
-    solution:
-      "Triển khai Standee 50 inch tại khu vực lễ tân và sảnh chờ.",
-    value:
-      "Cập nhật nội dung nhanh chóng, giảm phụ thuộc vào bảng in và tờ rơi.",
-    disclaimer:
-      "Kịch bản tham khảo — sẽ thay bằng case study đã xác nhận.",
-  },
-  {
-    industry: "Bán lẻ",
-    context: "Chuỗi điểm bán trên nhiều khu vực với nhiều chương trình cùng lúc.",
-    need: "Đồng bộ chương trình khuyến mãi giữa các cửa hàng.",
-    solution:
-      "Quản lý tập trung qua CMS Cloud cho hệ thống cửa hàng.",
-    value:
-      "Đồng bộ thông điệp và giảm thời gian cập nhật thủ công.",
-    disclaimer:
-      "Kịch bản tham khảo — sẽ thay bằng case study đã xác nhận.",
-  },
-  {
-    industry: "Văn phòng",
-    context:
-      "Khu vực lễ tân và sảnh chờ tại toà nhà văn phòng hạng A.",
-    need: "Nâng cấp hình ảnh và truyền thông nội bộ.",
-    solution:
-      "Triển khai Standee 50 inch tại hai khu vực trọng yếu.",
-    value:
-      "Không gian chuyên nghiệp hơn và thông điệp được kiểm soát tập trung.",
-    disclaimer:
-      "Kịch bản tham khảo — sẽ thay bằng case study đã xác nhận.",
-  },
-];
-
-// =========================================================================
 // DÙNG THỬ 7 NGÀY
 // =========================================================================
 export const trial = {
-  headline: "Trải nghiệm trong 7 ngày trước khi quyết định.",
+  headline: "Trải nghiệm Hushida trong 7 ngày trước khi quyết định",
   description:
-    "SHT hỗ trợ dùng thử tại Thành phố Hồ Chí Minh và Bình Dương. Đội ngũ kỹ thuật hỗ trợ cài đặt nội dung ban đầu và hướng dẫn sử dụng CMS.",
+    "Đăng ký demo để trực tiếp trải nghiệm chất lượng hiển thị, khả năng quản lý nội dung từ xa và mức độ phù hợp với không gian thực tế.",
   points: [
-    "Dùng thử miễn phí 7 ngày",
-    "Demo tại Thành phố Hồ Chí Minh và Bình Dương",
-    "Hỗ trợ cài nội dung ban đầu",
-    "Hướng dẫn sử dụng CMS",
+    "Demo miễn phí tại TP.HCM và Bình Dương",
+    "Hỗ trợ giao và lắp đặt thiết bị",
+    "Miễn phí thiết lập nội dung ban đầu",
+    "Hướng dẫn sử dụng CMS Cloud",
+    "Hỗ trợ trong quá trình trải nghiệm",
   ],
-  note: "Áp dụng theo lịch thiết bị demo và điều kiện chương trình.",
-  primaryCta: { label: "Đăng ký dùng thử", href: "#lead-form" },
-  secondaryCta: { label: "Đặt lịch demo", href: "#lead-form" },
+  note: "SHT sẽ liên hệ tư vấn trong thời gian sớm nhất.",
+  primaryCta: { label: "Đăng ký demo miễn phí", href: "#dang-ky-demo" },
+  secondaryCta: { label: "Đặt lịch demo", href: "#dang-ky-demo" },
 };
-
-// =========================================================================
-// DỊCH VỤ SHT
-// =========================================================================
-export const services: ServiceItem[] = [
-  {
-    title: "Tư vấn giải pháp",
-    description: "Khảo sát nhu cầu và đề xuất cấu hình phù hợp.",
-  },
-  {
-    title: "Demo thiết bị",
-    description:
-      "Trình diễn tại Thành phố Hồ Chí Minh và Bình Dương theo lịch thiết bị.",
-  },
-  {
-    title: "Giao hàng",
-    description: "Giao hàng tiêu chuẩn từ 1 đến 2 ngày làm việc.",
-  },
-  {
-    title: "Lắp đặt",
-    description: "Hỗ trợ lắp đặt tại điểm kinh doanh.",
-  },
-  {
-    title: "Cài nội dung ban đầu",
-    description: "Thiết lập nội dung trình chiếu ban đầu miễn phí.",
-  },
-  {
-    title: "Hướng dẫn sử dụng CMS",
-    description: "Đào tạo vận hành cho đội ngũ doanh nghiệp.",
-  },
-  {
-    title: "Bảo hành 12 tháng",
-    description: "Bảo hành chính hãng theo chính sách SHT.",
-  },
-  {
-    title: "Đổi mới trong 7 ngày đầu",
-    description:
-      "Đổi mới nếu thiết bị phát sinh lỗi được xác nhận trong 7 ngày đầu.",
-  },
-  {
-    title: "Hỗ trợ kỹ thuật",
-    description: "Đồng hành trong suốt quá trình vận hành.",
-  },
-];
 
 // =========================================================================
 // QUY TRÌNH TRIỂN KHAI
@@ -649,44 +449,27 @@ export const services: ServiceItem[] = [
 export const deploymentSteps: ProcessStep[] = [
   {
     step: 1,
-    title: "Đăng ký tư vấn",
-    description: "Gửi nhu cầu để đội ngũ SHT liên hệ trao đổi.",
+    title: "Tiếp nhận nhu cầu",
+    description:
+      "Tìm hiểu không gian, mục tiêu sử dụng và số lượng thiết bị dự kiến.",
   },
   {
     step: 2,
-    title: "Xác định nhu cầu",
+    title: "Demo và đề xuất giải pháp",
     description:
-      "Khảo sát mặt bằng, điểm lắp đặt và mục tiêu truyền thông.",
+      "Trình diễn thiết bị, CMS Cloud và tư vấn phương án phù hợp.",
   },
   {
     step: 3,
-    title: "Demo hoặc khảo sát",
-    description: "Trình diễn thiết bị và đề xuất giải pháp phù hợp.",
+    title: "Giao hàng, lắp đặt và cài đặt",
+    description:
+      "Lắp đặt thiết bị, cấu hình hệ thống và hỗ trợ nội dung ban đầu.",
   },
   {
     step: 4,
-    title: "Xác nhận giải pháp và báo giá",
-    description: "Thống nhất phương án và gửi báo giá chi tiết.",
-  },
-  {
-    step: 5,
-    title: "Giao hàng, lắp đặt",
-    description: "Vận chuyển và lắp đặt tại điểm kinh doanh.",
-  },
-  {
-    step: 6,
-    title: "Cài nội dung và hướng dẫn",
-    description: "Thiết lập nội dung ban đầu và đào tạo vận hành.",
-  },
-  {
-    step: 7,
-    title: "Nghiệm thu",
-    description: "Nghiệm thu thiết bị và xác nhận hệ thống vận hành.",
-  },
-  {
-    step: 8,
-    title: "Hỗ trợ sau bán hàng",
-    description: "Đồng hành trong suốt quá trình vận hành và bảo hành.",
+    title: "Nghiệm thu và hỗ trợ vận hành",
+    description:
+      "Hướng dẫn sử dụng CMS, bàn giao và hỗ trợ trong quá trình sử dụng.",
   },
 ];
 
@@ -700,78 +483,39 @@ export const faqs: FaqItem[] = [
       "CMS Cloud miễn phí theo chính sách hiện tại của SHT. Vui lòng liên hệ để biết chi tiết chính sách đang áp dụng.",
   },
   {
-    question: "Một tài khoản có thể dùng trên nhiều thiết bị không?",
+    question: "Một tài khoản có thể quản lý nhiều thiết bị không?",
     answer:
-      "Một tài khoản đã được sử dụng thực tế để quản lý nhiều thiết bị. Vui lòng trao đổi với SHT để xác nhận cấu hình phù hợp cho doanh nghiệp.",
+      "Một tài khoản có thể quản lý nhiều thiết bị. Liên hệ SHT để xác nhận cấu hình phù hợp cho doanh nghiệp.",
   },
   {
-    question: "Có cần Internet liên tục không?",
+    question: "Khi mất Internet, màn hình có tiếp tục phát nội dung không?",
     answer:
-      "Thiết bị hỗ trợ kết nối Wi-Fi 6 và RJ45. Để cập nhật nội dung từ xa, cần có kết nối Internet ổn định.",
+      "Có. Thiết bị hỗ trợ phát nội dung ngoại tuyến — nội dung đã tải sẽ tiếp tục phát khi mất kết nối Internet.",
   },
   {
-    question: "Mất Internet có phát nội dung được không?",
+    question: "Standee Hushida có phải màn hình cảm ứng không?",
     answer:
-      "Có. Thiết bị hỗ trợ phát nội dung ngoại tuyến — nội dung đã được tải về sẽ tiếp tục phát khi mất kết nối Internet.",
+      "Không. Hushida Digital Standee 50 inch không phải màn hình cảm ứng. Nội dung được vận hành hoàn toàn từ xa qua CMS Cloud.",
   },
   {
-    question: "Có phát được hình ảnh và video không?",
-    answer:
-      "Có. CMS Cloud hỗ trợ nhiều định dạng hình ảnh và video phổ biến, phù hợp cho nội dung thương hiệu.",
-  },
-  {
-    question: "Có hỗ trợ chia màn hình không?",
-    answer:
-      "Có. Thiết bị hỗ trợ chia bố cục màn hình, cho phép hiển thị nhiều vùng nội dung trong cùng một màn hình.",
-  },
-  {
-    question: "Đây có phải màn hình cảm ứng không?",
-    answer:
-      "Hushida Digital Standee 50 inch không phải màn hình cảm ứng. Nội dung được vận hành hoàn toàn từ xa qua CMS Cloud.",
-  },
-  {
-    question: "Có camera và micro không?",
-    answer:
-      "Sản phẩm không tích hợp camera và micro, phù hợp với mục tiêu trình chiếu nội dung thương hiệu.",
-  },
-  {
-    question: "SHT có hỗ trợ cài nội dung ban đầu không?",
-    answer:
-      "Có. SHT hỗ trợ cài đặt nội dung ban đầu miễn phí và hướng dẫn đội ngũ doanh nghiệp vận hành CMS.",
-  },
-  {
-    question: "Giao hàng mất bao lâu?",
-    answer: "Giao hàng tiêu chuẩn từ 1 đến 2 ngày làm việc.",
-  },
-  {
-    question: "Bảo hành bao lâu?",
+    question: "Sản phẩm được bảo hành trong bao lâu?",
     answer:
       "SHT áp dụng chính sách bảo hành 12 tháng cho thiết bị.",
   },
   {
-    question: "Chính sách lỗi 7 ngày như thế nào?",
-    answer:
-      "SHT đổi mới nếu thiết bị phát sinh lỗi được xác nhận trong 7 ngày đầu sử dụng.",
-  },
-  {
-    question: "Có dùng thử không?",
+    question: "SHT có chương trình dùng thử 7 ngày không?",
     answer:
       "Có. SHT hỗ trợ dùng thử miễn phí 7 ngày tại Thành phố Hồ Chí Minh và Bình Dương, áp dụng theo lịch thiết bị và điều kiện chương trình.",
   },
   {
-    question: "Demo ở khu vực nào?",
+    question: "SHT có hỗ trợ lắp đặt và cài đặt nội dung ban đầu không?",
     answer:
-      "SHT hỗ trợ demo miễn phí tại Thành phố Hồ Chí Minh và Bình Dương.",
+      "Có. SHT hỗ trợ giao hàng, lắp đặt và cài nội dung ban đầu miễn phí. Đội ngũ kỹ thuật hướng dẫn vận hành CMS.",
   },
   {
-    question: "Phù hợp với những ngành nào?",
+    question: "Giải pháp có phù hợp để triển khai tại nhiều chi nhánh không?",
     answer:
-      "Sản phẩm phù hợp với ngân hàng, bán lẻ, showroom, khách sạn, y tế, giáo dục, văn phòng và nhiều mô hình doanh nghiệp khác.",
-  },
-  {
-    question: "Có thể triển khai cho nhiều chi nhánh không?",
-    answer:
-      "Có. Một tài khoản có thể quản lý nhiều thiết bị, phù hợp cho hệ thống chuỗi và nhiều chi nhánh.",
+      "Có. Một tài khoản CMS có thể quản lý nhiều thiết bị, phù hợp cho hệ thống chuỗi và nhiều chi nhánh.",
   },
 ];
 
@@ -779,13 +523,13 @@ export const faqs: FaqItem[] = [
 // BIỂU MẪU THU LEAD
 // =========================================================================
 export const leadForm: LeadFormContent = {
-  headline: "Nhận tư vấn và báo giá từ SHT",
+  headline: "Đăng ký demo miễn phí",
   description:
-    "Để lại thông tin, đội ngũ SHT sẽ liên hệ tư vấn giải pháp phù hợp với nhu cầu của doanh nghiệp.",
+    "Để lại thông tin để trực tiếp trải nghiệm chất lượng hiển thị và khả năng quản lý nội dung từ xa của Hushida.",
   fields: {
     name: "Họ và tên",
     phone: "Số điện thoại",
-    company: "Tên doanh nghiệp",
+    company: "Doanh nghiệp",
     region: "Khu vực",
     need: "Nhu cầu tư vấn",
     quantity: "Số lượng dự kiến",
@@ -808,7 +552,7 @@ export const leadForm: LeadFormContent = {
   ],
   consentText:
     "Bằng việc gửi thông tin, anh/chị đồng ý để SHT liên hệ tư vấn về giải pháp phù hợp.",
-  submitLabel: "Gửi yêu cầu",
+  submitLabel: "Đăng ký demo miễn phí",
   loadingLabel: "Đang gửi thông tin...",
   successMessage:
     "SHT đã nhận được yêu cầu. Đội ngũ tư vấn sẽ liên hệ với anh/chị trong thời gian sớm nhất.",
@@ -824,39 +568,23 @@ export const leadForm: LeadFormContent = {
 };
 
 // =========================================================================
-// CTA CUỐI TRANG
-// =========================================================================
-export const finalCta = {
-  headline:
-    "Sẵn sàng nâng cấp cách doanh nghiệp truyền tải nội dung?",
-  description:
-    "Đăng ký demo để trải nghiệm Hushida Digital Standee và nhận tư vấn giải pháp phù hợp với không gian của doanh nghiệp.",
-  primaryCta: { label: "Đăng ký demo", href: "#lead-form" },
-  secondaryCta: { label: "Nhận báo giá", href: "#lead-form" },
-  phoneCta: {
-    label: "Gọi tư vấn",
-    href: siteConfig.phoneHref,
-  },
-};
-
-// =========================================================================
 // FOOTER
 // =========================================================================
 export const footer = {
   description:
     "Giải pháp Digital Signage giúp doanh nghiệp trình chiếu, quản lý và đồng bộ nội dung từ xa.",
   quickLinks: [
-    { label: "Giải pháp", href: "#solutions" },
-    { label: "CMS Cloud", href: "#cms" },
+    { label: "Giải pháp", href: "#cms" },
     { label: "Ứng dụng", href: "#industries" },
     { label: "Thông số", href: "#product" },
     { label: "Dự án thực tế", href: "#proof" },
-    { label: "Câu hỏi thường gặp", href: "#faq" },
+    { label: "FAQ", href: "#faq" },
+    { label: "Đăng ký demo", href: "#dang-ky-demo" },
   ],
   cta: {
     title: "Sẵn sàng nâng cấp không gian truyền thông?",
     button: "Đăng ký demo miễn phí",
-    href: "#lead-form",
+    href: "#dang-ky-demo",
   },
   copyright: `© ${new Date().getFullYear()} SHT Technology. All rights reserved.`,
 };

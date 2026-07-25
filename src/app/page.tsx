@@ -2,18 +2,14 @@ import { Header } from "@/components/layout/Header";
 import { MobileStickyCta } from "@/components/layout/MobileStickyCta";
 import { HeroSection } from "@/components/landing/HeroSection";
 import { TrustMetrics } from "@/components/landing/TrustMetrics";
-import { IndustriesSection } from "@/components/landing/IndustriesSection";
 import { DeploymentGallerySection } from "@/components/landing/DeploymentGallerySection";
-import { SolutionSection } from "@/components/landing/SolutionSection";
+import { IndustriesSection } from "@/components/landing/IndustriesSection";
 import { CmsCloudSection } from "@/components/landing/CmsCloudSection";
-import { UseCasesSection } from "@/components/landing/UseCasesSection";
-import { ProductHighlightsSection } from "@/components/landing/ProductHighlightsSection";
 import { ComparisonSection } from "@/components/landing/ComparisonSection";
-import { TrialSection } from "@/components/landing/TrialSection";
+import { ProductHighlightsSection } from "@/components/landing/ProductHighlightsSection";
 import { DeploymentProcessSection } from "@/components/landing/DeploymentProcessSection";
+import { TrialLeadSection } from "@/components/landing/TrialLeadSection";
 import { FaqSection } from "@/components/landing/FaqSection";
-import { LeadForm } from "@/components/landing/LeadForm";
-import { FinalCtaSection } from "@/components/landing/FinalCtaSection";
 import { Footer } from "@/components/landing/Footer";
 import { faqs } from "@/content/landing.vi";
 
@@ -43,18 +39,12 @@ export default function Home() {
         <TrustMetrics />
         <DeploymentGallerySection />
         <IndustriesSection />
-        <div id="solutions">
-          <SolutionSection />
-          <CmsCloudSection />
-        </div>
-        <UseCasesSection />
-        <ProductHighlightsSection />
+        <CmsCloudSection />
         <ComparisonSection />
-        <TrialSection />
+        <ProductHighlightsSection />
         <DeploymentProcessSection />
+        <TrialLeadSection />
         <FaqSection />
-        <LeadForm />
-        <FinalCtaSection />
       </main>
       <Footer />
       <MobileStickyCta />

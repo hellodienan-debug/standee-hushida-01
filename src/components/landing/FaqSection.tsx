@@ -13,22 +13,21 @@ export function FaqSection() {
         <Reveal>
           <SectionHeader
             eyebrow="Câu hỏi thường gặp"
-            title="Bạn có thắc mắc gì?"
-            description="Tổng hợp các câu hỏi phổ biến về Hushida Digital Signage và dịch vụ SHT."
+            title="Giải đáp những điều doanh nghiệp quan tâm."
+            description="Thông tin ngắn gọn về CMS Cloud, thiết bị và chương trình trải nghiệm Hushida."
             center
           />
         </Reveal>
 
-        <div className="mx-auto mt-14 max-w-3xl">
+        <div className="mx-auto mt-10 max-w-3xl">
           <Accordion items={faqs} />
         </div>
 
-        <p className="mt-8 text-center text-xs text-muted">
-          Không tìm thấy câu trả lời?{" "}
-          <a href="#lead-form" className="font-semibold text-brand underline underline-offset-2 hover:text-brand/80">
-            Liên hệ SHT
-          </a>{" "}
-          để được tư vấn trực tiếp.
+        <p className="mt-6 text-center text-xs text-muted">
+          Cần tư vấn thêm?{" "}
+          <a href="#dang-ky-demo" className="font-semibold text-brand underline underline-offset-2 hover:text-brand/80">
+            Đăng ký demo miễn phí
+          </a>
         </p>
       </Container>
     </section>

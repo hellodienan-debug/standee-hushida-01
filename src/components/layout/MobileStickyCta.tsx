@@ -8,7 +8,9 @@ export function MobileStickyCta() {
 
   useEffect(() => {
     const handleVisibility = () => {
-      const formSection = document.getElementById("lead-form");
+      const formSection =
+        document.getElementById("dang-ky-demo") ??
+        document.getElementById("lead-form");
       const footerSection = document.querySelector("footer");
       if (!formSection) return;
 
@@ -39,7 +41,10 @@ export function MobileStickyCta() {
   return (
     <div
       className="fixed inset-x-0 bottom-0 z-30 flex gap-2 border-t border-border bg-white/95 p-3 shadow-[0_-4px_20px_rgba(0,0,0,0.08)] backdrop-blur-md md:hidden"
-      style={{ display: show ? "flex" : "none" }}
+      style={{
+        display: show ? "flex" : "none",
+        paddingBottom: "max(0.75rem, env(safe-area-inset-bottom))",
+      }}
       role="region"
       aria-label="Hành động nhanh"
     >
@@ -51,7 +56,7 @@ export function MobileStickyCta() {
         Gọi tư vấn
       </a>
       <a
-        href="#lead-form"
+        href="#dang-ky-demo"
         className="flex-1 rounded-full bg-accent py-3 text-center text-sm font-semibold text-white transition-colors hover:bg-[#df7720]"
       >
         Đăng ký demo

@@ -7,10 +7,8 @@ import {
   Landmark,
   Car,
   ShoppingBag,
-  HeartPulse,
-  Hotel,
-  GraduationCap,
   Building,
+  Hotel,
   Home,
 } from "lucide-react";
 
@@ -21,10 +19,8 @@ const iconMap: Record<
   bank: Landmark,
   car: Car,
   "shopping-bag": ShoppingBag,
-  "heart-pulse": HeartPulse,
-  hotel: Hotel,
-  "graduation-cap": GraduationCap,
   building: Building,
+  hotel: Hotel,
   home: Home,
 };
 
@@ -41,21 +37,13 @@ const industryImages: Record<string, { src: string; alt: string }> = {
     src: "/images/industries/retail.svg",
     alt: "Màn hình Digital Signage tại cửa hàng bán lẻ",
   },
-  "heart-pulse": {
-    src: "/images/industries/healthcare.svg",
-    alt: "Màn hình Digital Signage tại khu vực tiếp đón",
+  building: {
+    src: "/images/industries/office.svg",
+    alt: "Màn hình Digital Signage tại văn phòng",
   },
   hotel: {
     src: "/images/industries/hotel.svg",
     alt: "Màn hình Digital Signage trong không gian khách sạn",
-  },
-  "graduation-cap": {
-    src: "/images/industries/education.svg",
-    alt: "Màn hình Digital Signage trong môi trường giáo dục",
-  },
-  building: {
-    src: "/images/industries/office.svg",
-    alt: "Màn hình Digital Signage tại văn phòng",
   },
   home: {
     src: "/images/industries/realestate.svg",
@@ -75,7 +63,7 @@ export function IndustriesSection() {
         />
 
         <Reveal>
-          <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 grid gap-4 sm:mt-14 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">
             {industries.map((ind) => {
               const Icon = iconMap[ind.icon];
               const image = industryImages[ind.icon];
@@ -84,24 +72,21 @@ export function IndustriesSection() {
                   key={ind.name}
                   className="group overflow-hidden rounded-[1.25rem] border border-border bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-brand/5"
                 >
-                  <div className="relative h-44 overflow-hidden bg-brand-light">
+                  <div className="relative h-40 overflow-hidden bg-brand-light sm:h-44">
                     <Image
                       src={image.src}
                       alt={image.alt}
                       fill
-                      sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                      sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
-                    <div
-                      className="absolute inset-0 bg-navy/15"
-                      aria-hidden="true"
-                    />
+                    <div className="absolute inset-0 bg-navy/15" aria-hidden="true" />
                   </div>
-                  <div className="p-7">
-                    <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-light text-brand transition-colors group-hover:bg-brand group-hover:text-white">
+                  <div className="p-5 sm:p-7">
+                    <div className="mb-3 flex h-11 w-11 items-center justify-center rounded-2xl bg-brand-light text-brand transition-colors group-hover:bg-brand group-hover:text-white sm:mb-4 sm:h-12 sm:w-12">
                       {Icon && <Icon size={22} aria-hidden />}
                     </div>
-                    <h3 className="text-lg font-semibold text-ink">{ind.name}</h3>
+                    <h3 className="text-base font-semibold text-ink sm:text-lg">{ind.name}</h3>
                     <p className="mt-2 text-sm leading-6 text-muted">
                       {ind.description}
                     </p>
@@ -111,6 +96,10 @@ export function IndustriesSection() {
             })}
           </div>
         </Reveal>
+
+        <p className="mt-8 text-center text-sm text-muted sm:mt-10">
+          Đồng thời phù hợp với y tế, giáo dục, nhà máy và các khu vực công cộng.
+        </p>
       </Container>
     </section>
   );

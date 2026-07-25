@@ -11,16 +11,16 @@ export function HeroSection() {
   return (
     <section
       id="top"
-      className="bg-navy flex min-h-[calc(100dvh-125px)] items-center py-8 text-white"
+      className="bg-navy flex min-h-[calc(100dvh-125px)] items-center overflow-hidden py-8 text-white"
     >
       <Container>
-        <div className="grid gap-10 lg:grid-cols-[1fr_0.7fr] lg:items-center">
+        <div className="grid gap-8 lg:grid-cols-[1fr_0.7fr] lg:gap-10 lg:items-center">
           <Reveal>
             <div>
               <p className="mb-6 text-sm font-semibold uppercase tracking-[0.18em] text-accent">
                 {hero.eyebrow}
               </p>
-              <h1 className="max-w-[22ch] text-[clamp(2.25rem,3.1vw,3rem)] font-bold leading-[1.02] tracking-[-0.045em] text-balance">
+              <h1 className="max-w-[22ch] text-[clamp(2.25rem,3.1vw,3rem)] font-bold leading-[1.02] tracking-[-0.045em] text-balance sm:max-w-[22ch]">
                 {hero.title}
               </h1>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-white/70 md:text-xl md:leading-9">
@@ -70,7 +70,7 @@ export function HeroSection() {
           </Reveal>
 
           <Reveal className="relative flex justify-center lg:justify-end">
-            <div className="w-full max-w-[min(60dvh,480px)]">
+            <div className="w-full max-w-[min(60dvh,480px)] px-2 sm:px-0">
               <Placeholder
                 label="Hình ảnh minh họa Hushida 50 inch"
                 className="aspect-[4/5]"

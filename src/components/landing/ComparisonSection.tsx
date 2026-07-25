@@ -16,24 +16,24 @@ export function ComparisonSection() {
         </Reveal>
 
         {/* Summary cards */}
-        <div className="mt-14 grid gap-4 md:grid-cols-2">
+        <div className="mt-10 grid gap-4 sm:mt-14 md:grid-cols-2">
           <Reveal>
-            <div className="rounded-[1.5rem] border border-border bg-white p-8">
+            <div className="rounded-[1.5rem] border border-border bg-white p-6 sm:p-8">
               <p className="text-xs font-bold uppercase tracking-[0.18em] text-muted">
                 Poster in ấn
               </p>
-              <p className="mt-4 text-2xl font-bold text-ink">Tĩnh — một lần</p>
+              <p className="mt-4 text-xl font-bold text-ink sm:text-2xl">Tĩnh — một lần</p>
               <p className="mt-3 text-sm leading-6 text-muted">
                 Phù hợp cho thông điệp ngắn hạn nhưng khó mở rộng và đồng bộ.
               </p>
             </div>
           </Reveal>
           <Reveal delay={0.08}>
-            <div className="rounded-[1.5rem] border border-brand bg-brand p-8 text-white">
+            <div className="rounded-[1.5rem] border border-brand bg-brand p-6 text-white sm:p-8">
               <p className="text-xs font-bold uppercase tracking-[0.18em] text-orange-200">
                 Hushida Digital Signage
               </p>
-              <p className="mt-4 text-2xl font-bold">Động — linh hoạt</p>
+              <p className="mt-4 text-xl font-bold sm:text-2xl">Động — linh hoạt</p>
               <p className="mt-3 text-sm leading-6 text-white/70">
                 Tạo giá trị dài hạn với tài sản truyền thông có thể tái sử dụng.
               </p>
@@ -43,7 +43,7 @@ export function ComparisonSection() {
 
         {/* Comparison table */}
         <Reveal>
-          <div className="mt-10 overflow-hidden rounded-[1.5rem] border border-border bg-white">
+          <div className="mt-8 overflow-hidden rounded-[1.5rem] border border-border bg-white sm:mt-10">
             {/* Desktop header */}
             <div className="hidden grid-cols-3 bg-brand-light px-6 py-4 text-xs font-bold uppercase tracking-[0.18em] text-brand md:grid">
               <p>Tiêu chí</p>

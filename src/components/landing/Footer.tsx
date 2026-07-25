@@ -39,12 +39,12 @@ const contactItems = [
 export function Footer() {
   return (
     <footer className="bg-[#101827] text-white">
-      <div className="container-shell py-14 md:py-16">
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-[1.25fr_0.75fr_1fr] lg:gap-16">
+      <div className="container-shell py-12 md:py-16">
+        <div className="grid gap-10 md:grid-cols-2 md:gap-12 lg:grid-cols-[1.25fr_0.75fr_1fr] lg:gap-16">
           <div>
             <Link
               href="#top"
-              className="inline-flex items-center gap-3 text-xl font-bold tracking-tight"
+              className="inline-flex items-center gap-3 text-lg font-bold tracking-tight sm:text-xl"
             >
               <span className="grid h-10 w-10 place-items-center rounded-lg bg-white text-sm font-bold text-brand">
                 SHT
