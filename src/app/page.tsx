@@ -3,6 +3,7 @@ import { MobileStickyCta } from "@/components/layout/MobileStickyCta";
 import { HeroSection } from "@/components/landing/HeroSection";
 import { TrustMetrics } from "@/components/landing/TrustMetrics";
 import { DeploymentGallerySection } from "@/components/landing/DeploymentGallerySection";
+import { VietinBankCaseStudy } from "@/components/landing/VietinBankCaseStudy";
 import { IndustriesSection } from "@/components/landing/IndustriesSection";
 import { CmsCloudSection } from "@/components/landing/CmsCloudSection";
 import { ComparisonSection } from "@/components/landing/ComparisonSection";
@@ -38,6 +39,7 @@ export default function Home() {
         <HeroSection />
         <TrustMetrics />
         <DeploymentGallerySection />
+        <VietinBankCaseStudy />
         <IndustriesSection />
         <CmsCloudSection />
         <ComparisonSection />
