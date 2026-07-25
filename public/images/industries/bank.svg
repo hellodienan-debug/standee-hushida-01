@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0b3b60"/>
+      <stop offset="100%" stop-color="#071b2b"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <rect x="0" y="400" width="800" height="200" fill="#04131f" opacity="0.3"/>
+  <rect x="100" y="180" width="600" height="320" rx="14" fill="#0f172a" stroke="#1e293b" stroke-width="3"/>
+  <rect x="130" y="210" width="540" height="260" rx="6" fill="#1e3a5f"/>
+  <rect x="160" y="250" width="120" height="14" rx="3" fill="#f28a2e"/>
+  <rect x="160" y="280" width="280" height="10" rx="2" fill="#94a3b8"/>
+  <rect x="160" y="300" width="220" height="10" rx="2" fill="#94a3b8"/>
+  <rect x="160" y="360" width="180" height="44" rx="6" fill="#f28a2e"/>
+  <text x="250" y="389" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff">NGÂN HÀNG</text>
+</svg>

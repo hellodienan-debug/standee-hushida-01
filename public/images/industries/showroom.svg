@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1f2937"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <ellipse cx="400" cy="500" rx="320" ry="40" fill="#000" opacity="0.4"/>
+  <path d="M 180 460 Q 180 380 260 380 L 540 380 Q 620 380 620 460 Z" fill="#374151" stroke="#4b5563" stroke-width="2"/>
+  <circle cx="260" cy="470" r="30" fill="#1f2937" stroke="#4b5563" stroke-width="3"/>
+  <circle cx="540" cy="470" r="30" fill="#1f2937" stroke="#4b5563" stroke-width="3"/>
+  <rect x="240" y="200" width="320" height="180" rx="8" fill="#0b3b60" stroke="#1e40af" stroke-width="2"/>
+  <rect x="260" y="220" width="280" height="140" rx="4" fill="#1e40af"/>
+  <text x="400" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#f28a2e">SHOWROOM</text>
+  <rect x="280" y="320" width="240" height="8" rx="2" fill="#93c5fd"/>
+</svg>
