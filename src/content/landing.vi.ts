@@ -33,7 +33,7 @@ export const siteConfig = {
 // THANH THÔNG BÁO
 // =========================================================================
 export const announcement: AnnouncementContent = {
-  label: "Dùng thử miễn phí 7 ngày tại Thành phố Hồ Chí Minh và Bình Dương.",
+  label: "Đăng ký demo tại Thành phố Hồ Chí Minh và Bình Dương.",
   href: "#dang-ky-demo",
   cta: "Xem điều kiện chương trình",
 };
@@ -54,10 +54,10 @@ export const navigation: NavItem[] = [
 // =========================================================================
 export const hero = {
   eyebrow: "Giải pháp truyền thông số cho doanh nghiệp",
-  title: "Biến mỗi không gian thành một điểm chạm thương hiệu số.",
+  title: "Standee Điện Tử Hushida - Điểm Chạm Thương Hiệu Số.",
   description:
     "Trình chiếu nội dung 4K sống động, cập nhật từ xa qua CMS Cloud và đồng bộ truyền thông trên nhiều thiết bị với Hushida Digital Standee 50 inch.",
-  primaryCta: { label: "Đăng ký dùng thử 7 ngày", href: "#dang-ky-demo" },
+  primaryCta: { label: "Đăng ký demo", href: "#dang-ky-demo" },
   secondaryCta: { label: "Nhận tư vấn và báo giá", href: "#dang-ky-demo" },
   trustPoints: [
     "Demo miễn phí",
@@ -78,7 +78,7 @@ export const trustMetrics: Metric[] = [
   { value: "Android 14", label: "Hệ điều hành hiện đại", animate: false },
   { value: "CMS Cloud", label: "Quản lý nội dung từ xa", animate: false },
   { value: "12 tháng", label: "Bảo hành chính hãng" },
-  { value: "7 ngày", label: "Dùng thử theo chính sách" },
+  { value: "Demo", label: "Trải nghiệm miễn phí" },
 ];
 
 // =========================================================================
@@ -425,10 +425,10 @@ export const comparison = {
 };
 
 // =========================================================================
-// DÙNG THỬ 7 NGÀY
+// ĐĂNG KÝ DEMO
 // =========================================================================
 export const trial = {
-  headline: "Trải nghiệm Hushida trong 7 ngày trước khi quyết định",
+  headline: "Trải nghiệm Hushida trước khi quyết định",
   description:
     "Đăng ký demo để trực tiếp trải nghiệm chất lượng hiển thị, khả năng quản lý nội dung từ xa và mức độ phù hợp với không gian thực tế.",
   points: [
@@ -503,9 +503,9 @@ export const faqs: FaqItem[] = [
       "SHT áp dụng chính sách bảo hành 12 tháng cho thiết bị.",
   },
   {
-    question: "SHT có chương trình dùng thử 7 ngày không?",
+    question: "SHT có hỗ trợ demo miễn phí không?",
     answer:
-      "Có. SHT hỗ trợ dùng thử miễn phí 7 ngày tại Thành phố Hồ Chí Minh và Bình Dương, áp dụng theo lịch thiết bị và điều kiện chương trình.",
+      "Có. SHT hỗ trợ demo miễn phí tại Thành phố Hồ Chí Minh và Bình Dương, áp dụng theo lịch thiết bị và điều kiện chương trình.",
   },
   {
     question: "SHT có hỗ trợ lắp đặt và cài đặt nội dung ban đầu không?",

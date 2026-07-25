@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 
@@ -16,36 +15,6 @@ const STORY = [
     body: "Thiết bị được giao, lắp đặt, cấu hình và hỗ trợ thiết lập nội dung ban đầu để sẵn sàng đưa vào sử dụng.",
   },
 ];
-
-const VALUE = [
-  {
-    heading: "Hiển thị chuyên nghiệp",
-    body: "Nội dung được trình chiếu trên màn hình 4K, phù hợp với không gian giao dịch hiện đại.",
-  },
-  {
-    heading: "Cập nhật linh hoạt",
-    body: "Hình ảnh và video có thể được thay đổi theo từng chương trình truyền thông.",
-  },
-  {
-    heading: "Quản lý từ xa",
-    body: "CMS Cloud hỗ trợ cập nhật nội dung mà không cần thao tác trực tiếp trên từng thiết bị.",
-  },
-  {
-    heading: "Đồng hành triển khai",
-    body: "SHT hỗ trợ tư vấn, giao hàng, lắp đặt và hướng dẫn vận hành.",
-  },
-];
-
-const BADGES = [
-  "Digital Standee 50\"",
-  "4K UHD",
-  "CMS Cloud",
-  "Lắp đặt & cấu hình",
-];
-
-const CTA_LABEL = "Đăng ký demo giải pháp tương tự";
-const CTA_HREF = "#dang-ky-demo";
-const CTA_SUPPORT = "SHT hỗ trợ demo tại TP.HCM và Bình Dương theo lịch thiết bị.";
 
 const IMAGE_ALT = "Digital Standee Hushida triển khai tại khu vực giao dịch VietinBank";
 const IMAGE_EXPECTED_PATH = "/images/case-study/vietinbank-case-study.jpg";
@@ -101,48 +70,6 @@ export function VietinBankCaseStudy() {
         <p className="vbtcs-caption hidden text-sm text-muted md:mt-3 md:block">
           Hình ảnh triển khai thực tế tại khu vực giao dịch.
         </p>
-
-        <div className="vbtcs-value mt-12 sm:mt-16">
-          <h3 className="text-xl font-semibold text-ink sm:text-2xl">
-            Giá trị của giải pháp
-          </h3>
-          <div className="vbtcs-value-grid mt-5 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
-            {VALUE.map((item) => (
-              <article
-                key={item.heading}
-                className="vbtcs-value-card h-full rounded-[1.25rem] border border-border bg-white p-4 sm:p-6"
-              >
-                <h4 className="text-sm font-semibold leading-5 text-ink sm:text-base">
-                  {item.heading}
-                </h4>
-                <p className="mt-2 text-xs leading-5 text-muted sm:text-sm sm:leading-6">
-                  {item.body}
-                </p>
-              </article>
-            ))}
-          </div>
-        </div>
-
-        <div
-          className="vbtcs-badges mt-8 flex flex-wrap gap-2 sm:mt-10"
-          aria-label="Thông tin giải pháp"
-        >
-          {BADGES.map((badge) => (
-            <span
-              key={badge}
-              className="vbtcs-badge rounded-full border border-border px-3 py-1 text-xs font-medium text-muted"
-            >
-              {badge}
-            </span>
-          ))}
-        </div>
-
-        <div className="vbtcs-cta mt-8 flex flex-col items-stretch gap-3 sm:mt-10 sm:flex-row sm:items-center sm:gap-5">
-          <Button href={CTA_HREF} className="w-full justify-center sm:w-auto">
-            {CTA_LABEL}
-          </Button>
-          <p className="text-xs leading-5 text-muted">{CTA_SUPPORT}</p>
-        </div>
       </Container>
     </section>
   );

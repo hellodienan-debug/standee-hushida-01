@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { navigation } from "@/content/landing.vi";
 import { SITE } from "@/lib/constants";
@@ -48,9 +49,14 @@ export function Header() {
           className="flex items-center gap-2.5 text-lg font-black leading-none tracking-tight text-white"
           aria-label={`${SITE.name} — Trang chủ`}
         >
-          <span className="grid h-[35px] w-[35px] shrink-0 place-items-center rounded-md bg-white text-sm leading-none text-accent font-black">
-            SHT
-          </span>
+          <Image
+            src="/images/logo/sht-logo.png"
+            alt={`${SITE.name} — Connecting Brands`}
+            width={60}
+            height={35}
+            priority
+            className="shrink-0 rounded-[20px]"
+          />
           <span className="hidden leading-none sm:inline">{SITE.name}</span>
         </Link>
 

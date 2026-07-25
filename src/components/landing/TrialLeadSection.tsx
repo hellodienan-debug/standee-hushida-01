@@ -79,7 +79,7 @@ export function TrialLeadSection() {
           <Reveal>
             <div>
               <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-accent sm:mb-5">
-                Dùng thử 7 ngày
+                Đăng ký demo
               </p>
               <h2 className="h2 text-balance font-semibold">{trial.headline}</h2>
               <p className="mt-4 text-base leading-7 text-muted sm:mt-5 sm:text-lg sm:leading-8">
