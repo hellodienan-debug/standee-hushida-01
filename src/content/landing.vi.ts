@@ -163,6 +163,11 @@ export const deploymentGallery: GalleryContent = {
       alt: "Standee Hushida tại khu vực hospitality",
       caption: "Khu vực hospitality",
     },
+    {
+      src: "/images/gallery/thu-vien-truong.png",
+      alt: "thu vien truong",
+      caption: "Thư viện trường",
+    },
   ],
 };
 

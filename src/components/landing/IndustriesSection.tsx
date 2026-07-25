@@ -26,27 +26,27 @@ const iconMap: Record<
 
 const industryImages: Record<string, { src: string; alt: string }> = {
   bank: {
-    src: "/images/industries/bank.svg",
+    src: "/images/industries/bank.jpg",
     alt: "Màn hình Digital Signage tại sảnh giao dịch",
   },
   car: {
-    src: "/images/industries/showroom.svg",
+    src: "/images/industries/showroom.jpg",
     alt: "Màn hình Digital Signage tại showroom",
   },
   "shopping-bag": {
-    src: "/images/industries/retail.svg",
+    src: "/images/industries/retail.png",
     alt: "Màn hình Digital Signage tại cửa hàng bán lẻ",
   },
   building: {
-    src: "/images/industries/office.svg",
+    src: "/images/industries/office.jpg",
     alt: "Màn hình Digital Signage tại văn phòng",
   },
   hotel: {
-    src: "/images/industries/hotel.svg",
+    src: "/images/industries/hotel.jpg",
     alt: "Màn hình Digital Signage trong không gian khách sạn",
   },
   home: {
-    src: "/images/industries/realestate.svg",
+    src: "/images/industries/realestate.jpg",
     alt: "Màn hình Digital Signage tại không gian bất động sản",
   },
 };
